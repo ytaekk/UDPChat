@@ -12,7 +12,7 @@ void ErrorHandling(const char* message);
 int main(int argc, char* argv[]) {
 
 	WSADATA wsaData; // 윈도우즈최적화 
-	SOCKET hServSock, hClntSock;
+	SOCKET hServSock;// hClntSock;
 	SOCKADDR_IN servAddr, clntAddr;
 
 	int szClntAddr;
@@ -68,7 +68,7 @@ int main(int argc, char* argv[]) {
 
 	}
 
-	closesocket(hClntSock);
+	// closesocket(hClntSock);
 	closesocket(hServSock);
 	WSACleanup();
 
